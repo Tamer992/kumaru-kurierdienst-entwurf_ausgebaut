@@ -289,36 +289,24 @@ body.menu-open { overflow: hidden; }
 .odo.is-in .d > span { transform: translateY(calc(var(--n) * -1em)); }
 .odo .s { display: inline-block; line-height: 1; white-space: pre; }
 
-/* ---------- Sendungen ---------- */
+/* ---------- Branchen: Foto oben, Text darunter ---------- */
 .ind { padding-block: var(--section); }
 .ind__grid { margin-top: clamp(28px, 4vw, 48px); display: grid; gap: 12px; grid-template-columns: 1fr; }
 @media (min-width: 820px) {
   .ind__grid { grid-template-columns: repeat(12, 1fr); gap: 14px; }
   .ind__tile--a { grid-column: span 7; } .ind__tile--b { grid-column: span 5; } .ind__tile--c { grid-column: span 5; } .ind__tile--d { grid-column: span 7; }
 }
-.ind__tile { position: relative; min-height: 420px; border-radius: var(--r-m); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; isolation: isolate; background: var(--surface-2); }
-.ind__tile::before { content: ""; position: absolute; inset: 0; z-index: -2; background: radial-gradient(55% 70% at 68% 34%, #ffffff, rgba(255, 255, 255, 0) 70%); }
-.ind__img { position: absolute; z-index: -1; top: 5%; height: 48%; width: auto; max-width: 78%; object-fit: contain; transition: transform 500ms var(--ease); }
-.ind__tile--a .ind__img { right: 6%; top: 2%; height: 58%; }
-
-.ind__tile--b .ind__img, .ind__tile--c .ind__img { left: 50%; translate: -50% 0; }
-.ind__tile--b .ind__img { top: 3%; height: 49%; }
-@media (min-width: 980px) {
-  /* breite Kachel: Text links in einer schmalen Spalte, Palette groß rechts daneben */
-  .ind__tile--d { container-type: inline-size; }
-  .ind__tile--d .ind__t { max-width: 44cqw; }
-  .ind__tile--d .ind__img { top: 5%; right: 3cqw; left: auto; height: 86%; width: 53cqw; max-width: none; object-fit: contain; object-position: center bottom; }
-}
-@media (max-width: 979px) {
-  .ind__tile { min-height: 0; justify-content: flex-start; }
-  .ind__img, .ind__tile--a .ind__img, .ind__tile--b .ind__img, .ind__tile--c .ind__img, .ind__tile--d .ind__img { position: relative; inset: auto; translate: none; z-index: auto; align-self: center; height: clamp(170px, 46vw, 240px); width: auto; max-width: calc(100% - 40px); margin: 26px 20px 0; }
-}
-@media (hover: hover) and (pointer: fine) { .ind__tile:hover .ind__img { transform: translateY(-5px); } }
-.ind__tile--a, .ind__tile--d { background: var(--surface-2); }
-.ind__t { padding: clamp(20px, 2.6vw, 32px); display: grid; gap: 8px; max-width: 46ch; color: var(--muted); font-size: 1rem; line-height: 1.45; }
+.ind__tile { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--r-m); background: var(--surface-2); text-decoration: none; transition: transform 160ms var(--ease); }
+.ind__tile:active { transform: scale(0.99); }
+.ind__img { display: block; width: 100%; height: clamp(200px, 24vw, 340px); object-fit: cover; transition: transform 700ms var(--ease); }
+.ind__t { flex: 1; padding: clamp(20px, 2.6vw, 32px); display: grid; align-content: start; gap: 8px; max-width: 52ch; color: var(--muted); font-size: 1rem; line-height: 1.45; }
 .ind__t b { color: var(--ink); font-size: 1.5rem; letter-spacing: -0.025em; line-height: 1.15; }
 .ind__tile .ind__t::after { content: ""; width: 44px; height: 44px; margin-top: 10px; border-radius: 50%; border: 1px solid var(--line-strong); background: no-repeat center / 18px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 10h12m-5-5 5 5-5 5' fill='none' stroke='%23c93434' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); transition: background-color 220ms ease, transform 260ms var(--ease); }
-@media (hover: hover) and (pointer: fine) { .ind__tile:hover .ind__t::after { background-color: var(--bg); transform: translateX(4px); } }
+@media (hover: hover) and (pointer: fine) {
+  .ind__tile:hover .ind__img { transform: scale(1.04); }
+  .ind__tile:hover .ind__t::after { background-color: var(--bg); transform: translateX(4px); }
+}
+@media (prefers-reduced-motion: reduce) { .ind__img, .ind__tile { transition: none; } }
 
 /* ---------- Über uns ---------- */
 .why { background: var(--surface-2); padding-block: var(--section); }
