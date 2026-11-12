@@ -2,6 +2,7 @@
   "use strict";
 /* Kumaru Kurierdienst, Unterseiten: Navigation und Kopfzeile. build.py fügt die Bereichsdateien an und schließt alles in eine Funktion ein. */
   const $ = (id) => document.getElementById(id);
+  const EN = document.documentElement.lang === "en"; // englische Fassung unter /en/
 
   /* ---------- Navigation ---------- */
   const navBtns = [...document.querySelectorAll(".nav__btn")];
@@ -16,7 +17,7 @@
   const burger = $("burger"), mobile = $("mobileNav");
   const setMenu = (open) => {
     burger.setAttribute("aria-expanded", String(open));
-    burger.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+    burger.setAttribute("aria-label", open ? (EN ? "Close menu" : "Menü schließen") : (EN ? "Open menu" : "Menü öffnen"));
     if (open) mobile.style.paddingTop = Math.round(document.querySelector(".top").getBoundingClientRect().bottom + 16) + "px"; // Menü beginnt direkt unter der Kopfzeile, auch nach dem Scrollen
     mobile.hidden = !open;
     document.body.classList.toggle("menu-open", open);
@@ -55,7 +56,7 @@
   if ($("orderForm") && (q.get("von") || q.get("nach") || q.get("fz"))) {
     const v = (k) => (q.get(k) || "").slice(0, 120);
     $("f-von").value = v("von"); $("f-nach").value = v("nach");
-    if (v("fz")) $("f-info").value = "Fahrzeug: " + v("fz");
+    if (v("fz")) $("f-info").value = (EN ? "Vehicle: " : "Fahrzeug: ") + v("fz");
   }
 
   /* ---------- Branchen: aktuelle Branche im Register markieren, am Handy ins Bild rücken ---------- */
@@ -85,7 +86,7 @@
     if (st) {
       const on = open[d] !== undefined && min >= open[d] && min < 1080;
       st.dataset.state = on ? "open" : "closed";
-      st.textContent = on ? "Jetzt erreichbar, bis 18:00 Uhr" : "Aktuell geschlossen. Mo bis Fr 07:00 bis 18:00 Uhr, Sa 09:00 bis 18:00 Uhr";
+      st.textContent = EN ? (on ? "Open now, until 18:00 (German time)" : "Closed now. Mon to Fri 07:00 to 18:00, Sat 09:00 to 18:00 (German time)") : on ? "Jetzt erreichbar, bis 18:00 Uhr" : "Aktuell geschlossen. Mo bis Fr 07:00 bis 18:00 Uhr, Sa 09:00 bis 18:00 Uhr";
     }
   }
 })();

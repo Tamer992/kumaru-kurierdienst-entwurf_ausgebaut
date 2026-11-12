@@ -2,6 +2,7 @@
 (() => {
   "use strict";
   const $ = (id) => document.getElementById(id);
+  const EN = document.documentElement.lang === "en"; // englische Fassung unter /en/
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)").matches;
 
@@ -18,7 +19,7 @@
   const burger = $("burger"), mobile = $("mobileNav");
   const setMenu = (open) => {
     burger.setAttribute("aria-expanded", String(open));
-    burger.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+    burger.setAttribute("aria-label", open ? (EN ? "Close menu" : "Menü schließen") : (EN ? "Open menu" : "Menü öffnen"));
     if (open) mobile.style.paddingTop = Math.round(document.querySelector(".top").getBoundingClientRect().bottom + 16) + "px"; // Menü beginnt direkt unter der Kopfzeile, auch nach dem Scrollen
     mobile.hidden = !open;
     document.body.classList.toggle("menu-open", open);
@@ -49,7 +50,7 @@
     }
     $("vName").textContent = d.name;
     $("vL").textContent = d.l; $("vB").textContent = d.b; $("vH").textContent = d.h;
-    $("vKg").textContent = Number(d.kg).toLocaleString("de-DE");
+    $("vKg").textContent = Number(d.kg).toLocaleString(EN ? "en-GB" : "de-DE");
     $("vLoad").textContent = d.load;
     $("vLift").textContent = d.lift;
   }
@@ -116,9 +117,9 @@
   // [Name, Länge, Breite, Hub?, Beschriftungsrichtung]
   const CITIES = [
     ["Brühl", 8.52, 49.39, true, "down"],
-    ["Paris", 2.35, 48.85], ["London", -0.12, 51.5, false, "left"], ["Amsterdam", 4.9, 52.37, false, "up"], ["Brüssel", 4.35, 50.85, false, "up"],
-    ["Zürich", 8.54, 47.37, false, "down"], ["Mailand", 9.19, 45.46, false, "down"], ["Wien", 16.37, 48.2], ["Prag", 14.42, 50.08, false, "up"],
-    ["Warschau", 21, 52.23], ["Kopenhagen", 12.57, 55.68, false, "up"], ["Barcelona", 2.17, 41.39],
+    ["Paris", 2.35, 48.85], ["London", -0.12, 51.5, false, "left"], ["Amsterdam", 4.9, 52.37, false, "up"], [EN ? "Brussels" : "Brüssel", 4.35, 50.85, false, "up"],
+    [EN ? "Zurich" : "Zürich", 8.54, 47.37, false, "down"], [EN ? "Milan" : "Mailand", 9.19, 45.46, false, "down"], [EN ? "Vienna" : "Wien", 16.37, 48.2], [EN ? "Prague" : "Prag", 14.42, 50.08, false, "up"],
+    [EN ? "Warsaw" : "Warschau", 21, 52.23], [EN ? "Copenhagen" : "Kopenhagen", 12.57, 55.68, false, "up"], ["Barcelona", 2.17, 41.39],
   ];
   const svg = $("netSvg"), NS = "http://www.w3.org/2000/svg";
   const hub = CITIES[0], hx = px(hub[1]), hy = py(hub[2]);

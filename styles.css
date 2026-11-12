@@ -143,6 +143,12 @@ p { max-width: 64ch; text-wrap: pretty; }
 .mn__foot { margin-top: auto; display: grid; gap: 10px; }
 body.menu-open { overflow: hidden; }
 
+
+/* Sprachwahl: oben als ruhiger Textlink (am Handy im Menü), im Menü unten klein */
+@media (max-width: 640px) { .util__lang { display: none; } }
+.mn__lang { text-align: center; font-size: 0.9375rem; }
+.mn__lang a { display: inline-block; padding: 10px 16px; color: var(--muted); text-decoration: none; }
+.mn__lang a:hover { color: var(--ink); }
 /* ---------- Hero ---------- */
 /* Wie kurierkumaru.de: Foto vollflächig (cover, mittig), darüber 68 % Schwarz, weißer Text */
 .hero { position: relative; isolation: isolate; color: #fff; padding-block: clamp(56px, 8vw, 112px); }
@@ -445,3 +451,8 @@ body.menu-open { overflow: hidden; }
   .mega, .mobile-nav, .mobile-nav li, .mobile-nav > .btn { animation: none; }
   .btn:active, .veh__tabs button:active { transform: none; }
 }
+
+/* Sprachwahl im Fuß: aktuelle Sprache dunkel, andere grau, Trennstrich dazwischen */
+.foot__lang { display: flex; align-items: center; }
+.foot__lang a + a { margin-left: 12px; padding-left: 12px; border-left: 1px solid var(--line); line-height: 1; }
+.foot__lang a[aria-current] { color: var(--ink); }
