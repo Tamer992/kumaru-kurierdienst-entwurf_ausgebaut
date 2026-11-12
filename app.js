@@ -19,6 +19,7 @@
   const setMenu = (open) => {
     burger.setAttribute("aria-expanded", String(open));
     burger.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+    if (open) mobile.style.paddingTop = Math.round(document.querySelector(".top").getBoundingClientRect().bottom + 16) + "px"; // Menü beginnt direkt unter der Kopfzeile, auch nach dem Scrollen
     mobile.hidden = !open;
     document.body.classList.toggle("menu-open", open);
   };

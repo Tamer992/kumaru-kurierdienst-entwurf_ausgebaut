@@ -10,7 +10,7 @@
 <link rel="icon" type="image/png" sizes="256x256" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
 <link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=68">
+<link rel="stylesheet" href="styles.css?v=69">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -85,23 +85,32 @@
 </header>
 
 <div class="mobile-nav" id="mobileNav" hidden>
-  <ul>
-    <li><a href="leistungen/">Leistungen</a></li>
-    <li><a href="leistungen/direkter-transport/">Direkter Transport</a></li>
-    <li><a href="leistungen/same-day-eilfahrten/">Same-Day und Eilfahrten</a></li>
-    <li><a href="leistungen/europaweite-zustellung/">Europaweite Zustellung</a></li>
-    <li><a href="leistungen/gefahrgut-sensible-gueter/">Sensible Güter und Gefahrgut</a></li>
-    <li><a href="leistungen/persoenliche-zustellung/">Persönliche Zustellung</a></li>
-    <li><a href="leistungen/zwei-mann-zustellung/">Zwei-Mann-Zustellung</a></li>
-    <li><a href="leistungen/lager-und-versand/">Lager und Versand</a></li>
-    <li><a href="branchen/">Branchen</a></li>
-    <li><a href="einsatzgebiet/">Einsatzgebiet</a></li>
-    <li><a href="ueber-uns/">Über uns</a></li>
-    <li><a href="fahrzeuge/">Fahrzeuge</a></li>
-    <li><a href="faq/">Häufige Fragen</a></li>
-    <li><a href="kontakt/">Kontakt</a></li>
-  </ul>
-  <a class="btn btn--primary" href="#kontakt">Angebot anfragen</a>
+  <nav aria-label="Hauptmenü">
+    <ul class="mn">
+      <li><details class="mn__grp"><summary>Leistungen</summary>
+        <ul class="mn__sub">
+          <li><a href="leistungen/">Alle Leistungen im Überblick</a></li>
+          <li><a href="leistungen/direkter-transport/">Direkter Transport</a></li>
+          <li><a href="leistungen/same-day-eilfahrten/">Same-Day und Eilfahrten</a></li>
+          <li><a href="leistungen/europaweite-zustellung/">Europaweite Zustellung</a></li>
+          <li><a href="leistungen/gefahrgut-sensible-gueter/">Sensible Güter und Gefahrgut</a></li>
+          <li><a href="leistungen/persoenliche-zustellung/">Persönliche Zustellung</a></li>
+          <li><a href="leistungen/zwei-mann-zustellung/">Zwei-Mann-Zustellung</a></li>
+          <li><a href="leistungen/lager-und-versand/">Lager und Versand</a></li>
+        </ul>
+      </details></li>
+      <li><a href="branchen/">Branchen</a></li>
+      <li><a href="einsatzgebiet/">Einsatzgebiet</a></li>
+      <li><a href="ueber-uns/">Über uns</a></li>
+      <li><a href="fahrzeuge/">Fahrzeuge</a></li>
+      <li><a href="faq/">Häufige Fragen</a></li>
+      <li><a href="kontakt/">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="mn__foot">
+    <a class="btn btn--primary" href="angebotsanfrage/">Angebot anfragen</a>
+    <a class="btn btn--ghost" href="tel:+4962024096491">Anrufen: +49 (0)6202 409 6491</a>
+  </div>
 </div>
 
 <main id="inhalt">
@@ -348,6 +357,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=47" defer></script>
+<script src="app.js?v=48" defer></script>
 </body>
 </html>
