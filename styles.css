@@ -389,6 +389,31 @@ body.menu-open { overflow: hidden; }
 .form__submit { justify-self: start; min-width: 220px; }
 .done { padding: 16px 18px; border-radius: 10px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); max-width: none; animation: settle 400ms var(--ease) both; }
 
+/* ---------- Anfrageformular hell (Startseite, Kontakt, Angebotsanfrage) ---------- */
+.contact--hell { color: var(--ink); background: var(--surface-2); border-radius: var(--r-l); }
+.contact--hell::before { display: none; }
+.contact--hell h2 { color: var(--ink); }
+.contact--hell .contact__copy > p { color: var(--muted); }
+.contact--hell .contact__lines { border-top-color: var(--line-strong); }
+.contact--hell .contact__lines li { border-bottom-color: var(--line); }
+.contact--hell .contact__lines span { color: var(--muted); }
+.contact--hell .contact__lines a { color: var(--ink); }
+.contact--hell .callqr { border-color: var(--line); background: #fff; }
+.contact--hell .callqr__code { padding: 4px; }
+.contact--hell .callqr__s { color: var(--muted); }
+.contact--hell :focus-visible { outline-color: var(--accent); }
+.contact--hell .form { background: #fff; border: 0; -webkit-backdrop-filter: none; backdrop-filter: none; border-radius: var(--r-m); box-shadow: 0 1px 2px rgba(17, 24, 39, 0.05); }
+.contact--hell .field label { color: var(--ink); }
+.contact--hell .field input, .contact--hell .field textarea { color: var(--ink); background: var(--surface-2); border-color: transparent; border-radius: 12px; }
+.contact--hell .field input:-webkit-autofill { -webkit-text-fill-color: var(--ink); box-shadow: 0 0 0 100px #eef1f6 inset; }
+.contact--hell .field input:focus, .contact--hell .field textarea:focus { border-color: var(--accent); background: #fff; box-shadow: 0 0 0 4px rgba(201, 52, 52, 0.14); }
+.contact--hell .field [aria-invalid="true"] { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(201, 52, 52, 0.14); }
+.contact--hell .field__err { color: var(--accent-text); }
+.contact--hell .done { color: var(--ink); background: var(--surface-2); border-color: var(--line); }
+@media (hover: hover) and (pointer: fine) {
+  .contact--hell .callqr:hover { border-color: var(--line-strong); background: #fff; }
+  .contact--hell .field input:hover, .contact--hell .field textarea:hover { border-color: var(--line-strong); }
+}
 /* ---------- Footer ---------- */
 .foot { background: var(--surface-2); color: var(--ink); }
 .foot a { text-decoration: none; }
