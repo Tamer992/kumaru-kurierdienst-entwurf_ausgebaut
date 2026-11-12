@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kumaru Kurierdienst | Express-Kurier, Transport sowie Lager und Versand aus Brühl</title>
+<meta name="description" content="Kumaru Kurierdienst aus Brühl: Direktfahrten, Same-Day, Zustellung in über 25 Ländern sowie Lager und Versand. Inhabergeführt seit 2011.">
+<meta name="color-scheme" content="light">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=67">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="util">
+  <div class="util__in">
+    <p>Express-Kurier in Deutschland und Europa</p>
+    <ul>
+      <li><a href="tel:+4962024096491">+49 (0)6202 409 6491</a></li>
+      <li><a href="mailto:info@kurierkumaru.de">info@kurierkumaru.de</a></li>
+    </ul>
+  </div>
+</div>
+
+<header class="top" id="top">
+  <div class="top__in">
+    <a class="logo" data-reload href="index.html" aria-label="Kumaru Kurierdienst, Startseite">
+      <picture>
+        <img src="img/kumaru-logo-dunkel.png?v=2" alt="Kumaru Kurierdienst" width="152" height="36">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Hauptnavigation" id="nav">
+      <ul>
+        <li><button type="button" class="nav__btn" aria-expanded="false" aria-controls="mega-sol">Leistungen</button></li>
+        <li><a href="branchen/">Branchen</a></li>
+        <li><a href="einsatzgebiet/">Einsatzgebiet</a></li>
+        <li><button type="button" class="nav__btn" aria-expanded="false" aria-controls="mega-co">Unternehmen</button></li>
+        <li><a href="kontakt/">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="top__cta">
+      <a class="btn btn--primary btn--sm" href="#kontakt">Angebot anfragen</a>
+      <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen"><span></span><span></span></button>
+    </div>
+  </div>
+
+  <div class="mega" id="mega-sol" hidden>
+    <div class="mega__in">
+      <ul class="mega__list">
+        <li><a href="leistungen/direkter-transport/"><b>Direkter Transport</b><span>Ein Fahrer, ohne Umladung vom Absender zum Empfänger.</span></a></li>
+        <li><a href="leistungen/same-day-eilfahrten/"><b>Same-Day und Eilfahrten</b><span>Zustellung innerhalb weniger Stunden zum vereinbarten Termin.</span></a></li>
+        <li><a href="leistungen/europaweite-zustellung/"><b>Europaweite Zustellung</b><span>Über 25 Länder, auch als Querversand.</span></a></li>
+        <li><a href="leistungen/gefahrgut-sensible-gueter/"><b>Sensible Güter und Gefahrgut</b><span>Fahrer mit ADR-Bescheinigung, jede Sendung versichert.</span></a></li>
+        <li><a href="leistungen/persoenliche-zustellung/"><b>Persönliche Zustellung</b><span>Übergabe direkt an den Empfänger, mit Unterschrift quittiert.</span></a></li>
+        <li><a href="leistungen/zwei-mann-zustellung/"><b>Zwei-Mann-Zustellung</b><span>Zwei Fahrer für schwere und sperrige Sendungen.</span></a></li>
+        <li><a href="leistungen/lager-und-versand/"><b>Lager und Versand</b><span>Wir lagern Ihre Ware und liefern sie an Ihre Kunden.</span></a></li>
+      </ul>
+      <div class="mega__side">
+        <p>Angebot in wenigen Minuten</p>
+        <a href="leistungen/" class="link">Alle Leistungen</a>
+        <a href="angebotsanfrage/" class="link">Angebot anfragen</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mega" id="mega-co" hidden>
+    <div class="mega__in">
+      <ul class="mega__list">
+        <li><a href="ueber-uns/"><b>Über uns</b><span>Inhabergeführt und konzernunabhängig, seit 2011 in Brühl.</span></a></li>
+        <li><a href="fahrzeuge/"><b>Fahrzeuge</b><span>Über 35 Kurierfahrzeuge, vom Citan bis zum Sprinter Koffer.</span></a></li>
+        <li><a href="faq/"><b>Häufige Fragen</b><span>Lieferzeit, Gewicht, Gefahrgut und Versicherung.</span></a></li>
+      </ul>
+      <div class="mega__side">
+        <p>Mo bis Fr 07:00 bis 18:00 Uhr, Sa 09:00 bis 18:00 Uhr</p>
+        <a href="tel:+4962024096491" class="link">+49 (0)6202 409 6491</a>
+        <a href="kontakt/" class="link">Kontakt und Anfahrt</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" hidden>
+  <ul>
+    <li><a href="leistungen/">Leistungen</a></li>
+    <li><a href="leistungen/direkter-transport/">Direkter Transport</a></li>
+    <li><a href="leistungen/same-day-eilfahrten/">Same-Day und Eilfahrten</a></li>
+    <li><a href="leistungen/europaweite-zustellung/">Europaweite Zustellung</a></li>
+    <li><a href="leistungen/gefahrgut-sensible-gueter/">Sensible Güter und Gefahrgut</a></li>
+    <li><a href="leistungen/persoenliche-zustellung/">Persönliche Zustellung</a></li>
+    <li><a href="leistungen/zwei-mann-zustellung/">Zwei-Mann-Zustellung</a></li>
+    <li><a href="leistungen/lager-und-versand/">Lager und Versand</a></li>
+    <li><a href="branchen/">Branchen</a></li>
+    <li><a href="einsatzgebiet/">Einsatzgebiet</a></li>
+    <li><a href="ueber-uns/">Über uns</a></li>
+    <li><a href="fahrzeuge/">Fahrzeuge</a></li>
+    <li><a href="faq/">Häufige Fragen</a></li>
+    <li><a href="kontakt/">Kontakt</a></li>
+  </ul>
+  <a class="btn btn--primary" href="#kontakt">Angebot anfragen</a>
+</div>
+
+<main id="inhalt">
+
+<section class="hero" aria-labelledby="h1">
+  <img class="hero__img" src="img/hero-sprinter.webp" width="1960" height="1060" alt="Weißer Mercedes Sprinter von Kumaru Kurierdienst fährt an Hochhäusern vorbei" fetchpriority="high">
+  <div class="hero__in">
+    <div class="hero__copy">
+      <h1 id="h1"><span class="ln" style="--i:0"><span>Express-Kurier aus Brühl.</span></span> <span class="ln" style="--i:1"><span>Für Deutschland und Europa.</span></span></h1>
+      <form class="quick" action="angebotsanfrage/#kontakt" method="get" aria-label="Schnellanfrage">
+        <div class="quick__f"><label for="q-von">Abholung</label><input id="q-von" name="von" type="text" placeholder="PLZ oder Ort" autocomplete="off"></div>
+        <div class="quick__f"><label for="q-nach">Ziel</label><input id="q-nach" name="nach" type="text" placeholder="PLZ oder Ort" autocomplete="off"></div>
+        <div class="quick__f"><label for="q-fz">Fahrzeug</label><select id="q-fz" name="fz"><option value="">Noch offen</option><option>Citan</option><option>Vito Lang</option><option>Sprinter</option><option>Sprinter Lang</option><option>Sprinter Koffer</option></select></div>
+        <button class="btn btn--primary quick__go" type="submit">Angebot anfragen</button>
+      </form>
+      <p class="hero__tel">Lieber am Telefon? <a href="tel:+4962024096491">+49 (0)6202 409 6491</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="logos" id="logos" aria-labelledby="h-logos">
+  <p id="h-logos">Zu unseren Kunden zählen</p>
+  <ul>
+    <li style="--i:0">DHL / Deutsche Post</li>
+    <li style="--i:1">BASF</li>
+    <li style="--i:2">FedEx</li>
+    <li style="--i:3">Sun Chemical</li>
+    <li style="--i:4">Fruit of the Loom</li>
+    <li style="--i:5">Zeit für Brot</li>
+  </ul>
+</section>
+
+<section class="svc" id="loesungen" aria-labelledby="h-sol">
+  <div class="wrap">
+    <div class="svc__head">
+      <h2 id="h-sol">Leistungen für Ihre Logistik.</h2>
+      <a class="link" href="leistungen/">Alle Leistungen im Überblick</a>
+    </div>
+    <ul class="svc__grid">
+      <li class="svc__t svc__t--a"><a href="leistungen/direkter-transport/"><img src="img/st-sprinter-landstrasse.webp" alt="Weißer Mercedes Sprinter auf einer kurvigen Landstraße" width="1800" height="1200"style="object-position:62% 88%"><span class="svc__b"><b>Direkter Transport</b><span>Ein Fahrer, ohne Umladung vom Absender zum Empfänger.</span></span></a></li>
+      <li class="svc__t svc__t--b"><a href="leistungen/same-day-eilfahrten/"><img src="img/st-sprinter-stadt.webp" alt="Weißer Mercedes Sprinter fährt bei Grün über eine Kreuzung in der Stadt" width="1800" height="1200"style="object-position:30% 60%"><span class="svc__b"><b>Same-Day und Eilfahrten</b><span>Zustellung innerhalb weniger Stunden zum vereinbarten Termin.</span></span></a></li>
+      <li class="svc__t svc__t--c"><a href="leistungen/europaweite-zustellung/"><img src="img/st-autobahn-luft.webp" alt="Autobahn von oben mit fließendem Verkehr" width="1800" height="1350" loading="lazy" decoding="async" style="object-position:50% 45%"><span class="svc__b"><b>Europaweite Zustellung</b><span>Über 25 Länder, auch als Querversand.</span></span></a></li>
+      <li class="svc__t svc__t--d"><a href="leistungen/gefahrgut-sensible-gueter/"><img src="img/st-koffer-weiss.webp" alt="Weißer Lkw mit geschlossenem Kofferaufbau vor einem hellen Gebäude" width="1800" height="1200"style="object-position:62% 60%"><span class="svc__b"><b>Sensible Güter und Gefahrgut</b><span>Fahrer mit ADR-Bescheinigung, jede Sendung versichert.</span></span></a></li>
+      <li class="svc__t svc__t--e"><a href="leistungen/persoenliche-zustellung/"><img src="img/st-paket-zerbrechlich.webp" alt="Karton mit rotem Klebeband „Fragile“ für zerbrechliche Ware" width="1800" height="1350"style="object-position:50% 50%"><span class="svc__b"><b>Persönliche Zustellung</b><span>Übergabe direkt an den Empfänger, mit Unterschrift quittiert.</span></span></a></li>
+      <li class="svc__t svc__t--f"><a href="leistungen/zwei-mann-zustellung/"><img src="img/st-lager-halle.webp" alt="Lagerhalle mit Regalen und Paletten" width="1800" height="1201" loading="lazy" decoding="async" style="object-position:50% 55%"><span class="svc__b"><b>Zwei-Mann-Zustellung</b><span>Zwei Fahrer für schwere und sperrige Sendungen.</span></span></a></li>
+      <li class="svc__t svc__t--g"><a href="leistungen/lager-und-versand/"><img src="img/st-lager-blau.webp" alt="Hochregallager mit blauen Regalen" width="1800" height="627" loading="lazy" decoding="async" style="object-position:50% 50%"><span class="svc__b"><b>Lager und Versand</b><span>Wir lagern Ihre Ware und liefern sie an Ihre Kunden.</span></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="ind" id="branchen" aria-labelledby="h-ind">
+  <div class="wrap">
+    <div class="svc__head">
+      <h2 id="h-ind">Für diese Branchen fahren wir.</h2>
+      <a class="link" href="branchen/">Alle Branchen</a>
+    </div>
+    <div class="ind__grid">
+      <a class="ind__tile ind__tile--a" href="branchen/#medizin">
+        <img class="ind__img" src="img/ind-medikamente.webp?v=3" alt="Isolierte Transportbox mit Etikett Kühlkette 2 bis 8 Grad" width="1191" height="956" loading="lazy" decoding="async">
+        <span class="ind__t"><b>Medizin und Pharma</b>Medikamente und Blutkonserven, direkt vom Absender zum Empfänger.</span>
+      </a>
+      <a class="ind__tile ind__tile--b" href="branchen/#kanzleien">
+        <img class="ind__img" src="img/ind-dokumente.webp" alt="Stapel Dokumente mit Briefumschlag" width="1180" height="640" loading="lazy" decoding="async">
+        <span class="ind__t"><b>Kanzleien und Verwaltung</b>Eilige und vertrauliche Unterlagen, vom Empfänger per Unterschrift quittiert.</span>
+      </a>
+      <a class="ind__tile ind__tile--c" href="branchen/#industrie">
+        <img class="ind__img" src="img/ind-ersatzteile.svg" alt="Ineinandergreifende Zahnräder aus Stahl" width="700" height="560" loading="lazy" decoding="async">
+        <span class="ind__t"><b>Industrie und Ersatzteile</b>Teile für Maschinen und Anlagen, damit die Produktion nicht stillsteht.</span>
+      </a>
+      <a class="ind__tile ind__tile--d" href="branchen/#handel">
+        <img class="ind__img" src="img/ind-paletten.webp" alt="Palette mit Kumaru-Paketen" width="1523" height="1313" loading="lazy" decoding="async">
+        <span class="ind__t"><b>Handel und Textil</b>Vom Einzelpaket bis zur Palette: Handelswaren, Textilien und Elektronik.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="net" id="einsatzgebiet" aria-labelledby="h-net">
+  <div class="net__in">
+    <div class="net__copy">
+      <h2 id="h-net">Von Brühl direkt in über 25 Länder.</h2>
+      <p>Unsere Fahrer starten in der Metropolregion Rhein-Neckar und fahren ohne Umladung bis zur Tür. Fehlt Ihr Zielland in der Liste, fragen Sie uns.</p>
+      <a class="link" href="einsatzgebiet/">Mehr zum Einsatzgebiet</a>
+      <dl class="net__stats">
+        <div><dd class="odo" data-value="15+" aria-label="über 15"></dd><dt>Jahre am Markt</dt></div>
+        <div><dd class="odo" data-value="54.000+" aria-label="über 54.000"></dd><dt>Sendungen pro Jahr</dt></div>
+        <div><dd class="odo" data-value="35+" aria-label="über 35"></dd><dt>Kurierfahrzeuge</dt></div>
+        <div><dd class="odo" data-value="1,37 t" aria-label="1,37 Tonnen"></dd><dt>Maximalgewicht pro Fahrt</dt></div>
+      </dl>
+    </div>
+    <div class="net__map" id="netMap">
+      <canvas id="netDots" width="1400" height="1015" aria-hidden="true"></canvas>
+      <svg id="netSvg" viewBox="0 0 1000 725" aria-label="Europakarte mit Verbindungen ab Brühl" role="img"></svg>
+    </div>
+    <p class="net__countries">Landzustellung in Deutschland, Österreich, Belgien, Tschechien, der Schweiz, Dänemark, Spanien, Finnland, Frankreich, Kroatien, Ungarn, Irland, Italien, Großbritannien, Liechtenstein, Luxemburg, den Niederlanden, Norwegen, Polen, Portugal, Rumänien, Schweden, der Slowakei, Slowenien und vielen mehr.</p>
+  </div>
+</section>
+
+<section class="veh" id="fahrzeuge" aria-labelledby="h-veh">
+  <div class="wrap">
+    <h2 id="h-veh">Vom Citan bis zum Sprinter Koffer.</h2>
+    <p class="veh__lead">Unsere Flotte umfasst über 35 Kurierfahrzeuge. Pro Fahrt laden wir bis zu 1,37 Tonnen.</p>
+    <div class="veh__tabs" role="tablist" aria-label="Fahrzeuge">
+      <button role="tab" type="button" aria-selected="false" data-id="citan" data-img="img/van-citan.webp?v=2" data-name="Mercedes Citan" data-lbh="153 × 152 × 125 cm" data-l="153" data-b="152" data-h="125" data-kg="500" data-load="Seite und hinten" data-lift="Nein">Citan</button>
+      <button role="tab" type="button" aria-selected="false" data-id="vito" data-img="img/van-vito-lang.webp?v=2" data-name="Mercedes Vito Lang" data-lbh="283 × 168 × 139 cm" data-l="283" data-b="168" data-h="139" data-kg="975" data-load="Seite und hinten" data-lift="Nein">Vito Lang</button>
+      <button role="tab" type="button" aria-selected="true" data-id="sprinter" data-img="img/van-sprinter.webp?v=2" data-name="Mercedes Sprinter" data-lbh="327 × 178 × 180 cm" data-l="327" data-b="178" data-h="180" data-kg="1370" data-load="Seite und hinten" data-lift="Nein">Sprinter</button>
+      <button role="tab" type="button" aria-selected="false" data-id="lang" data-img="img/van-sprinter-lang.webp?v=2" data-name="Mercedes Sprinter Lang" data-lbh="430 × 178 × 180 cm" data-l="430" data-b="178" data-h="180" data-kg="1225" data-load="Seite und hinten" data-lift="Nein">Sprinter Lang</button>
+      <button role="tab" type="button" aria-selected="false" data-id="koffer" data-img="img/van-sprinter-koffer.webp?v=2" data-name="Mercedes Sprinter Koffer" data-lbh="437 × 211 × 211 cm" data-l="437" data-b="211" data-h="211" data-kg="895" data-load="Nur hinten" data-lift="Ja">Sprinter Koffer</button>
+    </div>
+    <div class="veh__panel" role="tabpanel" aria-live="polite">
+      <div class="veh__stage">
+        <h3 class="veh__name" id="vName">Mercedes Sprinter</h3>
+        <div class="veh__img"><img id="vImg" src="img/van-sprinter.webp?v=2" alt="Mercedes Sprinter im Kumaru-Design" width="2300" height="960" decoding="async"></div>
+      </div>
+      <dl class="veh__spec">
+        <div><dt>Ladelänge</dt><dd><span id="vL">327</span><small>cm</small></dd></div>
+        <div><dt>Ladebreite</dt><dd><span id="vB">178</span><small>cm</small></dd></div>
+        <div><dt>Ladehöhe</dt><dd><span id="vH">180</span><small>cm</small></dd></div>
+        <div><dt>Zuladung bis</dt><dd><span id="vKg">1.370</span><small>kg</small></dd></div>
+        <div><dt>Beladung</dt><dd id="vLoad">Seite und hinten</dd></div>
+        <div><dt>Hebebühne</dt><dd id="vLift">Nein</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="fleet" id="fuhrpark" aria-labelledby="h-fleet">
+  <div class="wrap fleet__head">
+    <h2 id="h-fleet">Unser Fuhrpark.</h2>
+    <p>Über 35 Kurierfahrzeuge stehen für Ihre Sendung bereit. Hier ein Teil der Flotte.</p>
+  </div>
+  <picture class="fleet__row">
+    <source media="(max-width: 719px)" srcset="img/fuhrpark-reihe-schraeg.webp" width="1600" height="1200">
+    <img src="img/fuhrpark-reihe.webp" alt="Zehn weiße Kumaru-Transporter stehen nebeneinander vor einer Lagerhalle" width="1600" height="480" loading="lazy" decoding="async">
+  </picture>
+  <div class="wrap">
+    <ul class="fleet__grid">
+      <li class="fleet__ph fleet__ph--a">
+        <figure>
+          <img src="img/fuhrpark-crafter.webp" alt="Weißer VW Crafter von vorn auf dem Betriebshof" width="900" height="1200" loading="lazy" decoding="async">
+        </figure>
+      </li>
+      <li class="fleet__ph fleet__ph--b">
+        <figure>
+          <img src="img/fuhrpark-sprinter.webp" alt="Weißer Mercedes Sprinter von vorn zwischen zwei anderen Transportern" width="900" height="1200" loading="lazy" decoding="async">
+        </figure>
+      </li>
+      <li class="fleet__ph fleet__ph--c">
+        <figure>
+          <img src="img/fuhrpark-crafter-paar.webp" alt="Zwei weiße VW Crafter nebeneinander" width="900" height="1200" loading="lazy" decoding="async">
+        </figure>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="why" id="ueber-uns" aria-labelledby="h-why">
+  <div class="wrap why__in">
+    <div class="why__hero">
+      <h2 class="stm" id="h-why"><span style="--i:0">Inhabergeführt.</span><span style="--i:1">Konzernunabhängig.</span><span style="--i:2">Seit 2011.</span></h2>
+      <p class="why__lead">Kumaru Kurierdienst ist ein Transportunternehmen aus Brühl. Wir arbeiten mit unseren Kunden als Partner und entwickeln gemeinsam Abläufe, die zu ihrem Geschäft passen.</p>
+    </div>
+    <dl class="why__grid">
+      <div><dt>Persönlicher Kontakt</dt><dd>Sie erreichen uns telefonisch und sprechen mit den Menschen, die Ihre Sendung planen.</dd></div>
+      <div><dt>Schnelle Abholung</dt><dd>Unsere Fahrer holen Ihre Ware zum vereinbarten Termin ab.</dd></div>
+      <div><dt>Transportversicherung</dt><dd>Ihre Ladung ist während des gesamten Transports versichert.</dd></div>
+      <div><dt>Empfangsbestätigung</dt><dd>Der Empfänger quittiert den Erhalt mit seiner Unterschrift.</dd></div>
+      <div><dt>Konzernunabhängig</dt><dd>Kein Konzern gibt uns Abläufe vor. Wir richten uns nach Ihrem Bedarf.</dd></div>
+      <div><dt>Geschultes Personal</dt><dd>Unsere Fahrer sind ausgebildet und besitzen die ADR-Bescheinigung für Gefahrgut.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="flow" id="ablauf" aria-labelledby="h-flow">
+  <div class="wrap">
+    <h2 id="h-flow">So läuft ein Auftrag.</h2>
+    <ol class="flow__list">
+      <li><h3>Anfrage senden</h3><p>Rufen Sie an oder nutzen Sie das Formular. Wir brauchen Abholort, Ziel und Angaben zur Sendung.</p></li>
+      <li><h3>Angebot erhalten</h3><p>Innerhalb weniger Minuten melden wir uns mit einem unverbindlichen Angebot.</p></li>
+      <li><h3>Transport startet</h3><p>Nach Ihrer Beauftragung holen wir sofort ab und fahren direkt zum Ziel.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="h-faq">
+  <div class="wrap faq__in">
+    <h2 id="h-faq">Häufige Fragen</h2>
+    <div class="faq__acc">
+      <details name="faq" open><summary>Wie schnell wird geliefert?</summary><p>Die Zustellung erfolgt innerhalb weniger Stunden. Die genaue Zeit hängt von Zielort, Verkehr und Größe der Sendung ab.</p></details>
+      <details name="faq"><summary>Wie sicher ist meine Sendung?</summary><p>Erfahrene Fahrer mit der passenden Ausrüstung transportieren Ihre Sendung. Jede Fahrt ist versichert.</p></details>
+      <details name="faq"><summary>Welche Sendungen transportiert Kumaru?</summary><p>Pakete und Eilsendungen, Dokumente, Handelswaren, kritische Ersatzteile, Blutkonserven, Medikamente, vertrauliche Akten, Textilien und Elektronik. Auch Gefahrgut und Feuerwerkskörper gehören dazu.</p></details>
+      <details name="faq"><summary>Gibt es ein Maximalgewicht?</summary><p>Pro Fahrt laden wir bis zu 1,37 Tonnen.</p></details>
+      <details name="faq"><summary>Wie läuft ein Gefahrguttransport ab?</summary><p>Unsere Fahrer sind für Gefahrgut ausgebildet und halten alle Vorschriften ein. Sprechen Sie uns vor der Planung an.</p></details>
+      <details name="faq"><summary>Lagern Sie auch Ware ein?</summary><p>Ja. Wir lagern Ihre Ware und versenden sie nach Ihren Vorgaben. Schildern Sie uns Art und Menge, wir melden uns mit einem Angebot.</p></details>
+      <details name="faq"><summary>Liefern Sie an Postfächer?</summary><p>Nein. Für jede Zustellung benötigen wir eine Firmenanschrift.</p></details>
+      <details name="faq"><summary>Wie beauftrage ich einen Transport?</summary><p>Rufen Sie an oder senden Sie das Formular. Sie erhalten schnellstmöglich ein unverbindliches Angebot per E-Mail.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="h-contact">
+  <div class="contact__in">
+    <div class="contact__copy">
+      <h2 id="h-contact">Sprechen Sie mit uns über Ihre Sendung.</h2>
+      <p>Nennen Sie uns Abholort, Ziel und Art der Sendung. Das unverbindliche Angebot erhalten Sie schnellstmöglich per E-Mail.</p>
+      <ul class="contact__lines">
+        <li><span>Telefon</span><a href="tel:+4962024096491">+49 (0)6202 409 6491</a></li>
+        <li><span>E-Mail</span><a href="mailto:info@kurierkumaru.de">info@kurierkumaru.de</a></li>
+        <li><span>Adresse</span>Mannheimer Str. 49, 68782 Brühl</li>
+      </ul>
+      <a class="callqr" href="tel:+4962024096491"><span class="callqr__code"><img src="img/qr-anruf.svg" alt="QR-Code zum Anrufen: +49 6202 409 6491" width="88" height="88"></span><span class="callqr__txt"><span class="callqr__s">Zum Anrufen scannen</span><span class="callqr__t">Direkt mit uns sprechen</span></span></a>
+    </div>
+    <form class="form" id="orderForm" novalidate>
+      <div class="field"><label for="f-firma">Unternehmen</label><input id="f-firma" name="firma" type="text" autocomplete="organization" required><p class="field__err" hidden>Bitte nennen Sie Ihr Unternehmen.</p></div>
+      <div class="field"><label for="f-name">Ansprechpartner</label><input id="f-name" name="name" type="text" autocomplete="name" required><p class="field__err" hidden>Bitte nennen Sie Ihren Namen.</p></div>
+      <div class="field"><label for="f-mail">E-Mail</label><input id="f-mail" name="mail" type="email" autocomplete="email" required><p class="field__err" hidden>Bitte geben Sie eine gültige E-Mail-Adresse an.</p></div>
+      <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="f-von">Abholadresse</label><input id="f-von" name="von" type="text" required><p class="field__err" hidden>Bitte geben Sie die Abholadresse an.</p></div>
+      <div class="field"><label for="f-nach">Zieladresse (Firmenanschrift)</label><input id="f-nach" name="nach" type="text" required><p class="field__err" hidden>Bitte geben Sie die Zieladresse an.</p></div>
+      <div class="field field--wide"><label for="f-info">Angaben zur Sendung: Inhalt, Gewicht, Maße, Termin (optional)</label><textarea id="f-info" name="info" rows="4"></textarea></div>
+      <button class="btn btn--primary form__submit" type="submit">Anfrage senden</button>
+      <p class="done" id="done" role="status" hidden>Danke, Ihre Anfrage ist eingegangen. Sie erhalten schnellstmöglich ein unverbindliches Angebot per E-Mail.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__brand">
+      <a data-reload href="index.html" aria-label="Kumaru Kurierdienst, Startseite"><picture><img src="img/kumaru-logo-dunkel.png?v=2" alt="Kumaru Kurierdienst" width="152" height="36"></picture></a>
+      <p>Express-Kurier, Transport sowie Lager und Versand aus Brühl. Inhabergeführt seit 2011.</p>
+    </div>
+    <nav class="foot__col" aria-label="Leistungen"><h2>Leistungen</h2><ul><li><a href="leistungen/direkter-transport/">Direkter Transport</a></li><li><a href="leistungen/same-day-eilfahrten/">Same-Day und Eilfahrten</a></li><li><a href="leistungen/europaweite-zustellung/">Europaweite Zustellung</a></li><li><a href="leistungen/gefahrgut-sensible-gueter/">Sensible Güter und Gefahrgut</a></li><li><a href="leistungen/persoenliche-zustellung/">Persönliche Zustellung</a></li><li><a href="leistungen/zwei-mann-zustellung/">Zwei-Mann-Zustellung</a></li><li><a href="leistungen/lager-und-versand/">Lager und Versand</a></li></ul></nav>
+    <nav class="foot__col" aria-label="Branchen"><h2>Branchen</h2><ul><li><a href="branchen/#medizin">Medizin und Pharma</a></li><li><a href="branchen/#industrie">Industrie und Ersatzteile</a></li><li><a href="branchen/#chemie">Chemie und Gefahrgut</a></li><li><a href="branchen/#kanzleien">Kanzleien und Verwaltung</a></li><li><a href="branchen/#handel">Handel und Textil</a></li></ul></nav>
+    <nav class="foot__col" aria-label="Unternehmen"><h2>Unternehmen</h2><ul><li><a href="ueber-uns/">Über uns</a></li><li><a href="fahrzeuge/">Fahrzeuge</a></li><li><a href="einsatzgebiet/">Einsatzgebiet</a></li><li><a href="faq/">Häufig gestellte Fragen</a></li><li><a href="angebotsanfrage/">Angebotsanfrage</a></li><li><a href="kontakt/">Kontakt</a></li><li><a href="https://kurierkumaru.de/datenschutzerklaerung/">Datenschutzerklärung</a></li><li><a href="https://kurierkumaru.de/impressum/">Impressum</a></li></ul></nav>
+    <nav class="foot__col" aria-label="Kurierdienst Städte"><h2>Kurierdienst Städte</h2><ul><li><a href="mannheim/">Kurierdienst Mannheim</a></li><li><a href="ludwigshafen-am-rhein/">Kurierdienst Ludwigshafen</a></li><li><a href="heidelberg/">Kurierdienst Heidelberg</a></li><li><a href="speyer/">Kurierdienst Speyer</a></li><li><a href="landau/">Kurierdienst Landau</a></li><li><a href="karlsruhe/">Kurierdienst Karlsruhe</a></li></ul></nav>
+    <div class="foot__col"><h2>Kontakt</h2><ul class="foot__loc"><li><a href="tel:+4962024096491">+49 (0)6202 409 6491</a></li><li><a href="mailto:info@kurierkumaru.de">info@kurierkumaru.de</a></li><li>Mannheimer Str. 49<br>68782 Brühl</li></ul></div>
+  </div>
+  <div class="foot__bar">
+    <p>© 2026 Kumaru | Alle Rechte vorbehalten</p>
+    <ul><li><a href="https://kurierkumaru.de/impressum/">Impressum</a></li><li><a href="https://kurierkumaru.de/datenschutzerklaerung/">Datenschutzerklärung</a></li></ul>
+  </div>
+</footer>
+
+<script src="app.js?v=47" defer></script>
+</body>
+</html>
