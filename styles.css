@@ -102,7 +102,7 @@ p { max-width: 64ch; text-wrap: pretty; }
 .nav__btn[aria-expanded="true"]::after { transform: translateY(1px) rotate(225deg); }
 @media (hover: hover) and (pointer: fine) { .nav a:hover, .nav__btn:hover { background: var(--surface-2); } }
 .top__cta { margin-left: auto; display: flex; align-items: center; gap: 10px; }
-@media (min-width: 980px) { .nav { display: block; } .burger { display: none !important; } }
+@media (min-width: 1140px) { .nav { display: block; } .burger { display: none !important; } } /* darunter passen die Menüpunkte nicht neben Logo und Knopf */
 @media (max-width: 979px) { .top__cta .btn { display: none; } }
 
 .burger { width: 46px; height: 46px; border: 1px solid var(--line-strong); background: #fff; border-radius: 12px; position: relative; cursor: pointer; transition: border-color 300ms var(--ease), transform 180ms var(--ease); }
@@ -146,7 +146,7 @@ body.menu-open { overflow: hidden; }
 
 /* Sprachwahl: oben als ruhiger Textlink (am Handy im Menü), im Menü unten klein */
 @media (max-width: 640px) { .util__lang { display: none; } }
-.mn__lang { text-align: center; font-size: 0.9375rem; }
+.mn__lang { max-width: none; text-align: center; font-size: 0.9375rem; }
 .mn__lang a { display: inline-block; padding: 10px 16px; color: var(--muted); text-decoration: none; }
 .mn__lang a:hover { color: var(--ink); }
 /* ---------- Hero ---------- */
