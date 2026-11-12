@@ -315,7 +315,7 @@
 .uu__in { display: grid; gap: 40px; }
 .uu__txt p { margin-top: 20px; color: var(--muted); font-size: 1.125rem; max-width: 62ch; }
 .uu__txt p:first-of-type { color: var(--ink); font-size: 1.25rem; line-height: 1.5; }
-.uu__hq { align-self: start; padding: clamp(24px, 3vw, 36px); border-radius: 22px; background: var(--surface-2); border-top: 3px solid var(--accent); }
+.uu__hq { align-self: start; padding: clamp(24px, 3vw, 36px); border-radius: var(--r-l); background: var(--surface-2); }
 .uu__hq h2 { font-size: 1.35rem; letter-spacing: -0.02em; }
 .uu__hq address { margin-top: 14px; font-style: normal; font-size: 1.125rem; font-weight: 600; line-height: 1.45; }
 .uu__hq dl { margin: 22px 0 24px; display: grid; gap: 12px; }
@@ -325,18 +325,26 @@
 .uu__hq dd a { text-decoration: none; }
 @media (hover: hover) and (pointer: fine) { .uu__hq dd a:hover { color: var(--accent-text); } }
 @media (min-width: 980px) { .uu__in { grid-template-columns: 1.5fr 1fr; gap: clamp(48px, 7vw, 120px); } }
-.uz { padding-block: clamp(56px, 8vw, 104px); color: #fff; background: radial-gradient(55% 80% at 100% 0%, rgba(201, 52, 52, 0.26), transparent 70%), #0b1017; }
-.uz h2 { color: #fff; }
-.uz__grid { margin-top: clamp(28px, 4vw, 52px); display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(255, 255, 255, 0.18); }
-.uz__grid div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 8px; padding: clamp(22px, 3vw, 36px) clamp(12px, 2vw, 28px) 0 0; }
-.uz__grid dd { margin: 0; font-size: clamp(2.2rem, 4.4vw, 3.6rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.uz__grid dt { color: #a3aebf; font-size: 0.9375rem; }
-@media (min-width: 900px) { .uz__grid { grid-template-columns: repeat(4, 1fr); } .uz__grid div + div { padding-left: clamp(16px, 2vw, 28px); border-left: 1px solid rgba(255, 255, 255, 0.12); } }
-.mosaic { background: var(--surface-2); }
-.mosaic__grid { margin-top: clamp(28px, 4vw, 52px); display: grid; gap: 16px; grid-template-columns: 1fr; align-items: start; }
-@media (min-width: 720px) { .mosaic__grid { grid-template-columns: repeat(3, 1fr); gap: 24px; } .mosaic__grid figure:nth-child(2) { margin-top: 56px; } }
-.mosaic__grid figure { margin: 0; overflow: hidden; border-radius: 24px; background: #1a222d; }
+/* Zahlen: hell und groß statt dunklem Band mit rotem Schein */
+.uz { padding-block: var(--section); background: var(--surface-2); }
+.uz__grid { margin-top: clamp(28px, 4vw, 52px); display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(28px, 4vw, 40px) 16px; }
+.uz__grid div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 10px; padding-top: 18px; border-top: 1px solid var(--line-strong); }
+.uz__grid dd { margin: 0; font-size: clamp(2.5rem, 5.6vw, 4.75rem); font-weight: 700; letter-spacing: -0.045em; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); }
+.uz__grid dt { color: var(--muted); font-size: 1rem; }
+@media (min-width: 900px) { .uz__grid { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
+.mosaic__grid { margin-top: clamp(28px, 4vw, 52px); display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); align-items: start; }
+.mosaic__grid figure:nth-child(2) { margin-top: 56px; }
+.mosaic__grid figure { margin: 0; overflow: hidden; border-radius: var(--r-m); background: var(--line); }
 .mosaic__grid img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+@media (max-width: 719px) {
+  /* Handy: Fotos zum Wischen wie auf der Fahrzeuge-Seite */
+  .mosaic__grid { grid-auto-flow: column; grid-auto-columns: 78%; grid-template-columns: none; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+  .mosaic__grid::-webkit-scrollbar { display: none; }
+  .mosaic__grid figure { scroll-snap-align: start; }
+  .mosaic__grid figure:nth-child(2) { margin-top: 0; }
+}
+.mosaic__grid:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .mosaic__more { margin-top: 36px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; }
 
 /* ---------- Branchen: Register links, Branchen rechts ---------- */
