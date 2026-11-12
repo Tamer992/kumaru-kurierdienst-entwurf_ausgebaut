@@ -191,10 +191,11 @@ body.menu-open { overflow: hidden; }
 .logos > p { color: var(--muted); font-size: 0.9375rem; max-width: none; }
 .logos ul { margin-top: 20px; position: relative; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
 @media (min-width: 900px) { .logos ul { grid-template-columns: repeat(3, 1fr); } .logos li:nth-child(3n+1) { border-left: 0; padding-left: 0; } .logos li:nth-child(-n+3) { border-bottom: 1px solid var(--line); } }
-.logos li { padding: 26px 16px 26px 0; font-size: clamp(1.1rem, 1.6vw, 1.375rem); font-weight: 600; letter-spacing: -0.015em; color: var(--ink); white-space: nowrap;
+.logos li { display: flex; align-items: center; min-height: clamp(96px, 9vw, 120px); padding: 20px 16px 20px 0;
   clip-path: inset(0 100% 0 0); transform: translateX(-22px); transition: clip-path 900ms var(--ease) calc(var(--i) * 140ms + 200ms), transform 900ms var(--ease) calc(var(--i) * 140ms + 200ms); }
 .logos li + li { border-left: 1px solid var(--line); padding-left: 24px; }
-@media (max-width: 899px) { .logos li + li { border-left: 0; padding-left: 0; } .logos li { border-bottom: 1px solid var(--line); white-space: normal; } }
+@media (max-width: 899px) { .logos li + li { border-left: 0; padding-left: 0; } .logos li { border-bottom: 1px solid var(--line); } }
+.logos img { display: block; max-width: 100%; height: auto; }
 .logos.is-in li { clip-path: inset(0 -2% 0 0); transform: none; }
 
 /* ---------- Leistungen ---------- */
