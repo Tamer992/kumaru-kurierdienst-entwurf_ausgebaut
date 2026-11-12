@@ -14,9 +14,9 @@
   <url><loc>https://kurierkumaru.de/leistungen/direkter-transport/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/leistungen/europaweite-zustellung/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/leistungen/gefahrgut-sensible-gueter/</loc><priority>0.8</priority></url>
-  <url><loc>https://kurierkumaru.de/leistungen/lager-und-versand/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/leistungen/persoenliche-zustellung/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/leistungen/same-day-eilfahrten/</loc><priority>0.8</priority></url>
+  <url><loc>https://kurierkumaru.de/leistungen/versandservice/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/leistungen/zwei-mann-zustellung/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/ludwigshafen-am-rhein/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/mannheim/</loc><priority>0.8</priority></url>
@@ -29,7 +29,7 @@
   <url><loc>https://kurierkumaru.de/en/services/dangerous-goods/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/en/services/personal-delivery/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/en/services/two-person-delivery/</loc><priority>0.8</priority></url>
-  <url><loc>https://kurierkumaru.de/en/services/warehousing-and-fulfilment/</loc><priority>0.8</priority></url>
+  <url><loc>https://kurierkumaru.de/en/services/shipping-service/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/en/services/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/en/fleet/</loc><priority>0.8</priority></url>
   <url><loc>https://kurierkumaru.de/en/about-us/</loc><priority>0.8</priority></url>
