@@ -201,33 +201,46 @@
 .flow--rows .flow__list li::before { display: none; }
 .flow--route .flow__list li::before { margin: 0; }
 
-/* ---------- Fahrzeugkarten ---------- */
-.vcards { margin-top: clamp(28px, 4vw, 56px); display: grid; gap: 24px; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .vcards { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-.vcard { overflow: hidden; border-radius: 26px; background: #fff; border: 1px solid var(--line); display: flex; flex-direction: column; }
-.vcard__stage { padding: 28px 28px 0; background: radial-gradient(70% 70% at 50% 0%, #fff, #eef2f8); }
+/* ---------- Fahrzeugkarten: helle Produktkacheln, Daten als ruhige Liste ---------- */
+.vcards { margin-top: clamp(28px, 4vw, 56px); display: grid; gap: 20px; grid-template-columns: 1fr; }
+.vcard { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--r-l); background: var(--surface-2); }
+.vcard__stage { padding: clamp(24px, 3vw, 40px) clamp(20px, 3vw, 40px) 0; }
 .vcard__stage img { width: 100%; height: auto; aspect-ratio: 2300 / 960; object-fit: contain; mix-blend-mode: multiply; }
-.vcard__b { padding: 24px 28px 8px; }
-.vcard__b h2 { font-size: 1.6rem; }
-.vcard__b p { margin-top: 8px; color: var(--muted); }
-.vcard dl { margin-top: auto; display: grid; grid-template-columns: repeat(2, 1fr); background: #0b1017; color: #fff; }
-.vcard dl > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 4px; padding: 16px 22px; border-top: 1px solid rgba(255, 255, 255, 0.12); }
-.vcard dl > div:nth-child(even) { border-left: 1px solid rgba(255, 255, 255, 0.12); }
-@media (min-width: 900px) {
-  .vcard:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr 0.9fr; grid-template-rows: auto 1fr; }
-  .vcard:last-child:nth-child(odd) .vcard__stage { grid-row: 1 / span 2; display: flex; align-items: center; padding: 40px; }
-  .vcard:last-child:nth-child(odd) .vcard__b { padding-top: 40px; }
-  .vcard:last-child:nth-child(odd) dl { align-self: end; }
+.vcard__b { padding: clamp(20px, 2.4vw, 28px) clamp(22px, 3vw, 36px) 0; }
+.vcard__b h3 { font-size: clamp(1.375rem, 2vw, 1.75rem); letter-spacing: -0.025em; line-height: 1.15; }
+.vcard__b p { margin-top: 8px; color: var(--muted); max-width: 44ch; }
+.vcard dl { margin: auto 0 0; padding: 20px clamp(22px, 3vw, 36px) clamp(22px, 3vw, 32px); }
+.vcard dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+.vcard dt { font-size: 0.9375rem; color: var(--muted); }
+.vcard dd { margin: 0; font-weight: 600; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 759px) {
+  /* Handy: Modelle nebeneinander zum Wischen statt fünf langer Karten untereinander */
+  .vcards { grid-auto-flow: column; grid-auto-columns: 86%; grid-template-columns: none; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+  .vcards::-webkit-scrollbar { display: none; }
+  .vcard { scroll-snap-align: start; }
 }
-.vcard dt { font-size: 0.8125rem; color: rgba(255, 255, 255, 0.64); }
-.vcard dd { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; }
+@media (min-width: 760px) { .vcards { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+@media (min-width: 1100px) {
+  .vcard:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: 1.15fr 0.85fr; grid-template-rows: auto 1fr; }
+  .vcard:last-child:nth-child(odd) .vcard__stage { grid-row: 1 / span 2; display: flex; align-items: center; padding: 48px; }
+  .vcard:last-child:nth-child(odd) .vcard__b { padding-top: 48px; }
+}
+.vcards:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
-/* ---------- Fotos (Zeile) ---------- */
-.shots { display: grid; gap: 16px; grid-template-columns: 1fr; }
-@media (min-width: 720px) { .shots { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
-.shots figure { margin: 0; overflow: hidden; border-radius: 22px; background: #1a222d; }
+/* ---------- Fotos vom Betriebshof ---------- */
+.shots { margin-top: clamp(28px, 4vw, 48px); display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .shots { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.shots figure { margin: 0; overflow: hidden; border-radius: var(--r-m); background: var(--line); }
 .shots img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
-
+@media (max-width: 719px) {
+  /* Handy: Fotos wie die Modelle zum Wischen */
+  .shots { grid-auto-flow: column; grid-auto-columns: 78%; grid-template-columns: none; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+  .shots::-webkit-scrollbar { display: none; }
+  .shots figure { scroll-snap-align: start; }
+}
+.shots:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 /* ---------- FAQ-Gruppen ---------- */
 .faqg + .faqg { margin-top: clamp(40px, 6vw, 72px); }
 .faqg h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); margin-bottom: 20px; }
