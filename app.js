@@ -168,7 +168,7 @@
 
   /* ---------- Kundennamen laufen von links ein ---------- */
   const logos = $("logos");
-  const lio = new IntersectionObserver(([en]) => { if (en.isIntersecting) { logos.classList.add("is-in"); lio.disconnect(); } }, { threshold: 0.2 });
+  const lio = new IntersectionObserver(([en]) => { if (en.isIntersecting) { logos.classList.add("is-in"); lio.disconnect(); } }, { threshold: 0.5 });
   reduce ? logos.classList.add("is-in") : lio.observe(logos);
 
   /* ---------- Statement "Inhabergeführt" ---------- */

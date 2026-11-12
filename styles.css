@@ -189,14 +189,12 @@ body.menu-open { overflow: hidden; }
 /* ---------- Kunden ---------- */
 .logos { width: min(var(--wrap), 100% - var(--gutter) * 2); margin: 0 auto; padding-block: clamp(40px, 6vw, 80px); }
 .logos > p { color: var(--muted); font-size: 0.9375rem; max-width: none; }
-.logos ul { margin-top: 20px; position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-@media (min-width: 900px) { .logos ul { grid-template-columns: repeat(4, minmax(0, 1fr)); } .logos li:nth-child(4n+1) { border-left: 0; padding-left: 0; } }
-.logos li { display: flex; align-items: center; min-height: clamp(96px, 9vw, 120px); padding: 20px 16px 20px 0; border-bottom: 1px solid var(--line);
-  clip-path: inset(0 100% 0 0); transform: translateX(-22px); transition: clip-path 700ms var(--ease) calc(var(--i) * 60ms), transform 700ms var(--ease) calc(var(--i) * 60ms); }
+.logos ul { margin-top: 20px; position: relative; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); }
+@media (min-width: 900px) { .logos ul { grid-template-columns: repeat(3, 1fr); } .logos li:nth-child(3n+1) { border-left: 0; padding-left: 0; } .logos li:nth-child(-n+3) { border-bottom: 1px solid var(--line); } }
+.logos li { padding: 26px 16px 26px 0; font-size: clamp(1.1rem, 1.6vw, 1.375rem); font-weight: 600; letter-spacing: -0.015em; color: var(--ink); white-space: nowrap;
+  clip-path: inset(0 100% 0 0); transform: translateX(-22px); transition: clip-path 900ms var(--ease) calc(var(--i) * 140ms + 200ms), transform 900ms var(--ease) calc(var(--i) * 140ms + 200ms); }
 .logos li + li { border-left: 1px solid var(--line); padding-left: 24px; }
-@media (max-width: 899px) { .logos li + li { border-left: 0; padding-left: 0; } }
-.logos__mehr { color: var(--muted); font-size: 1rem; font-weight: 500; letter-spacing: -0.01em; }
-.logos img { display: block; min-width: 0; max-width: 100%; height: auto; }
+@media (max-width: 899px) { .logos li + li { border-left: 0; padding-left: 0; } .logos li { border-bottom: 1px solid var(--line); white-space: normal; } }
 .logos.is-in li { clip-path: inset(0 -2% 0 0); transform: none; }
 
 /* ---------- Leistungen ---------- */
